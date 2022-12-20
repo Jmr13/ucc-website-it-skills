@@ -1,0 +1,1302 @@
+* { 
+
+	box-sizing: border-box;
+
+	font-family: "Source Sans Pro", sans-serif;
+
+	padding: 0;
+
+	margin: 0;
+
+}
+
+:root {
+
+	--orange: #D85F00 ;
+
+	--green: #00670C;
+
+	--darkgray: #161616;
+
+	--lgray: #EBEBEB;
+
+}
+
+html {
+
+	scroll-behavior: smooth;
+
+}
+
+body {
+	max-width: 100vw;
+}
+
+
+.logo {
+	
+	width: 40%;
+
+}
+
+.logo_container {
+
+	display: flex;
+
+	align-items: center;
+
+	color: var(--darkgray);
+
+}
+
+.logo_container img{
+
+	width: 10%;
+
+}
+
+.logo_container p{
+
+	font-size: 1.5rem;
+
+	font-weight: bold;
+
+}
+
+.logo_image {
+
+	width: 20%;
+
+}
+
+.navbar {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: var(--orange);
+
+  padding: 1rem 1rem;
+
+  white-space:nowrap;
+
+  position: fixed;
+
+  background-color: white;
+
+  z-index: 20;
+
+  border-bottom: 2px solid var(--lgray);
+
+  width: 100%;
+
+}
+
+
+
+.navlinks {
+
+  flex-grow: 1;
+
+  list-style-type: none;
+
+}
+
+
+
+.menu {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 1em;
+
+  text-decoration: none;
+
+}
+
+a {
+    all: unset;
+}
+
+
+
+.menu a:hover {
+
+	background-color: white;
+
+	color: var(--orange);
+
+    transition: 2s ease-in-out;
+
+	border-bottom: 1px solid var(--orange);
+
+}
+
+
+
+.menu_pages {
+
+  display: flex;
+
+  justify-content: space-evenly;
+
+  width: 100%;
+
+  font-weight: bold;
+
+}
+
+
+
+.menu a {
+
+    text-decoration: none;
+
+	padding: 1rem 2rem;
+
+	cursor: pointer;
+
+}
+
+
+
+a:link {
+
+  text-decoration: none;
+
+}
+
+
+
+a:visited {
+
+  text-decoration: none;
+
+}
+
+
+
+#checkbox_toggle {
+
+  display: none;
+
+}
+
+
+
+.hamburger {
+
+  display: none;
+
+  font-size: 24px;
+
+  user-select: none;
+
+  cursor: pointer;
+
+}
+
+
+
+.hero {
+
+	background-image: url("../images/home/bg_hero.png");
+
+	background-size: cover;	
+
+	text-align: center;
+
+	padding: 20rem 0;
+
+	width: 100%;
+
+	color:white;
+
+	font-size: 3.5rem;
+
+}
+
+.hero h1 {
+
+	font-size: 8rem;
+
+	padding-top: 1.5rem;
+
+}
+
+.hero button {
+
+	padding: 1.5rem 0;
+
+	color: white;
+
+	background-color: transparent;
+
+	border: .10rem solid white;
+
+	padding: 1rem 2rem;
+
+}
+
+.hero button:hover {
+
+	background-color: white;
+
+	color: black;
+
+	cursor: pointer;
+
+}
+.hero h3 {
+	font-size: 1.5rem;
+	font-family: roboto;
+}
+
+.news {
+
+	padding-bottom: 2rem;
+
+}
+
+.news_card {
+
+	display: flex;
+
+	justify-content: space-evenly;
+
+	width: 100%;
+
+	flex-wrap: wrap;
+
+}
+
+.news_card img{
+
+	margin: 1rem;
+
+}
+
+/* Facilities */
+
+.facilities {
+
+	display: flex;
+
+	justify-content: space-around;
+
+	align-items: center;
+
+	flex-wrap: wrap;
+
+	position: relative;
+
+	gap: 1rem;
+
+}
+
+.facilities_card {
+
+	position: relative;
+
+	padding: .50rem;
+
+	width: 40%;
+
+}
+
+.facilities_card div {
+
+	position: relative;
+
+}
+
+.facilities_card_img {
+
+	position: absolute;
+
+	top: 0;
+
+	right: 0;
+
+	left: 0;
+
+	width: 100%;
+
+	z-index: 3;
+
+	background-size: cover;
+
+}
+
+.facilities_card_img img {
+
+	width: 100%;
+
+}
+
+.facilities_card_txt {
+
+	width: 100%;
+
+	flex-grow: 1;
+
+	text-align: center;
+
+	padding: 1rem 0;
+
+	color: white;
+}
+
+/* Gallery*/
+
+.gallery {
+
+	padding-bottom: 2rem;
+
+}
+
+.gallery_card {
+
+	display: flex;
+
+	justify-content: space-around;
+
+	align-items: center;
+
+	flex-wrap: wrap;
+
+	gap: 1rem 0;
+
+	font-size: 1.5rem;
+
+}
+
+
+
+.gallery_card_ind {
+
+	display: flex;
+
+	flex-direction: column;
+
+	width: 30%;
+
+	height: 25rem;
+
+	position: relative;
+
+	overflow: hidden;
+
+}
+
+.gallery_card_ind img{
+
+	display: flex;
+
+	flex-direction: column;
+
+	height: 25rem;
+
+	position: absolute;
+
+	width: 100%;
+
+	z-index: -5;
+
+	background-size: cover;
+	
+}
+
+
+.gallery_card h3{
+
+	color: white;
+
+	width: 100%;
+
+	border-left: 0.5rem solid var(--orange);
+
+    margin: 1rem 1rem;
+
+	padding: 0 1rem;
+	
+}
+
+.gallery_card p{
+
+	color: white;
+
+	width: 100%;
+
+    margin: 1rem 1rem;
+
+	font-size: 1rem;
+	
+}
+
+
+
+/*Wnd Gallery*/
+
+
+
+.univ_off_card {
+
+	display: flex;
+
+	justify-content: space-evenly;
+
+	align-items: space-evenly;
+
+	flex-direction: row;
+
+	flex-wrap: wrap;
+
+	width: 100% ;
+
+	margin-bottom: 1rem;
+
+}
+
+
+
+.univ_off_card h4 {
+
+	font-size: 1.5rem;
+
+	width: 100%;
+
+	text-align: center;
+
+	margin-bottom: 2rem;
+
+}
+
+
+
+.univ_off_card_ind {
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+	flex-direction: column;
+
+	width: 30%;
+
+	background-color: #F5F5F5;
+
+	margin: 2.5rem 0;
+
+	border-color: 1px solid #F0F0F0;
+
+}
+
+
+
+.univ_off_card_ind div {
+
+	text-align: center;
+
+	flex-grow: 1;
+
+	padding: 0 2rem;
+
+	transform: translate(0, -1.5rem);
+
+}
+
+
+
+.univ_off_card_ind img {
+
+	border-radius: 50%;
+
+	width: 40%;
+
+	background-color: #ff7700;
+
+	padding: .25rem;
+
+	transform: translate(0, -3rem);
+
+}
+
+
+
+.section_title {
+
+  border-left: 5rem solid green;
+
+  font-size: 3rem;
+
+  padding: 1.5rem 2rem;
+
+  color: var(--darkgray);
+
+  width: 100%;
+
+  background-color: #f9f9f9;
+
+  margin: 2rem 0;
+
+}
+
+
+
+/*About Us*/
+
+.univ_details_card {
+
+	display: flex;
+
+	justify-content: space-between;
+
+	flex-direction: row;
+
+	flex-wrap: wrap;
+
+	width: 100% ;
+
+}
+
+.univ_details_card_ind {
+
+	display: flex;
+
+	align-items: center;
+
+	flex-direction: column;
+
+	width: 50%;
+
+	padding: 3rem 1.5rem;
+
+	font-size: 1rem;
+
+}
+
+
+.mvg_wrapper {
+
+	display: flex;
+
+	justify-content: space-between;
+
+	flex-direction: row;
+
+	flex-wrap: wrap;
+
+	width: 100% ;
+
+	font-size: 2rem;
+
+}
+
+.mission {
+
+	background-color: var(--orange);
+
+	color: white;
+
+}
+
+.mission {
+
+	background-color: var(--orange);
+
+	color: white;
+	
+}
+
+.vision {
+
+	background-color: white;
+
+	color: var(--orange);
+	
+}
+
+.vision p {
+
+	color: var(--darkgray);
+	
+}
+
+
+
+.univ_details_card_ind_main {
+
+	background: url("../images/home/bg_history.png") no-repeat;
+
+    background-repeat: no-repeat;
+
+	background-size: cover;
+
+	display: flex;
+
+	align-items: center;
+
+	flex-direction: column;
+
+	width: 100%;
+
+}
+
+.univ_details_card_ind_main h1{
+
+	text-align: left;
+
+	width: 100%;
+
+	padding: 0 3rem;
+	
+	padding-bottom: 2rem;
+
+	font-size: 7rem;
+
+	color: var(--orange);
+
+}
+
+.univ_details_card_ind_main p{
+
+	text-align: left;
+
+	width: 90%;
+
+	font-size: 1.5rem;
+
+	margin-left: 2rem;
+
+	color: var(--darkgray);
+
+	padding-bottom: 2rem;
+
+}
+
+
+
+.univ_details_card_ind_text {
+
+	text-align: left;
+
+	padding: 0 3rem;
+
+	width: 100%;
+
+	font-size: 1.5rem;
+
+}
+
+/*End of About Us*/
+
+/*Contact Us*/
+
+.contact_info {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+}
+
+
+
+.contact_info_img {
+
+	background-image: url("../images/home/bg_email.png");
+
+	background-size: cover;	
+
+	width: 50%;
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+	padding-right: 30%;
+
+}
+
+.contact_info_img h1 {
+
+	width: 40%;
+
+	font-size: 5rem;
+
+	color: white;
+
+}
+
+
+
+.contact_info_form {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 50%;
+
+  padding: 5rem 3rem;
+
+  color: white;
+
+  background-image: url("../images/home/bg_map.png");
+
+  background-size: cover;	
+
+}
+
+.contact_info_form form {
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+	flex-wrap: wrap;
+
+	padding: 1rem 1rem;
+
+}
+
+
+
+.contact_info_form h2 {
+
+	font-weight: bold;
+
+	color: #ff7700;
+
+	font-size: 2rem;
+
+}
+
+.contact_info_form form input, 
+
+.contact_info_form form select,
+
+.contact_info_form form textarea {
+
+	width: 100%;
+
+	padding: 1rem;
+
+	accent-color: white;
+
+	font-family: "Source Sans Pro", sans-serif;
+
+	font-size: 1rem;
+
+	border-radius: .25rem;
+
+	border: none;
+
+}
+
+.input:focus {
+	background-color: var(--orange);
+}
+
+.contact_info_form form select{
+
+	cursor: pointer;
+
+}
+
+.contact_info_form form label{
+
+	width: 100%;
+
+	text-align: start;
+
+	margin: .5rem 0;
+
+	font-weight: bold;
+
+	color: white;
+
+}
+
+.btn_submit {
+
+	background-color: white;
+
+	border: none;
+
+	color: var(--orange);
+
+	cursor: pointer;
+
+	margin-top: 1rem;
+
+	padding: 2rem 0;
+
+	font-size: 1rem;
+
+	font-weight: bold;
+
+}
+
+/* End of contact us */
+
+/* Footer */
+
+.footer {
+
+	display: flex;
+
+	justify-content: space-evenly;
+
+	flex-direction: column;
+
+	background-image: url("../images/home/bg_footer.png");
+
+	background-size: cover;	
+
+}
+
+.footer_upper {
+
+	display: flex;
+
+	justify-content: space-between;
+
+
+	padding: 3rem 0;
+
+	width: 100%;
+
+}
+
+
+
+.footer_logo {
+
+	width: 40%;
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+}
+
+
+
+.footer_links {
+
+	width: 40%;
+
+}
+
+
+
+.footer_links {
+
+	display: flex;
+
+	justify-content: center;
+
+	flex-wrap: wrap;
+
+	text-decoration: none;
+
+	color: white;
+
+}
+
+
+
+.footer_links p {
+
+	font-size: 1.5rem;
+
+	font-weight: bold;
+
+	width: 100%;
+
+}
+
+
+
+.footer_links h5 {
+
+	width: 100%;
+	
+	font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+.footer_links a {
+
+	color: white;
+
+	padding: 0 1rem;
+
+	font-size: 1rem;
+
+}
+
+
+
+.footer_links a:hover {
+
+	border-bottom: .25rem solid #ff7700;
+
+}
+
+
+
+.copyright {
+
+	text-align: center;
+
+	padding: 1rem;
+
+	color: white;
+
+	background-color: var(--darkgray);
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  .logo {
+
+	display: none;
+	
+  }
+
+  .hero {
+    padding: 20rem 1rem;
+    width: 100%;
+  }
+
+  .navlinks {
+
+    flex-grow: 0;
+
+	list-style: none;
+
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .menu {
+
+    display: none;
+
+    position: absolute;
+
+    background-color: white;
+
+	width: 100vw;
+
+    right: 0;
+
+    left: 0;
+
+    text-align: center;
+
+    padding-top: 2rem;
+
+  }
+
+
+
+  .menu a {
+
+    padding: 1rem 0;
+
+	color: var(--orange);
+
+  }
+
+
+
+  .menu a:hover {
+
+    background-color: var(--orange);
+
+	color: white;
+
+    transition: 0.3s ease;
+
+  }
+
+
+
+  .menu_pages {
+
+    flex-direction: column;
+
+  }
+
+
+
+  input[type=checkbox]:checked~.menu {
+
+    display: block;
+
+  }
+
+  input[type=checkbox]:checked~.hamburger {
+
+    rotate: 90deg;
+
+  }
+
+  .hamburger {
+
+    display: block;
+
+  }
+
+  .univ_details_card_ind_main h1 {
+    font-size: 5rem;
+  }
+
+  .univ_details_card_ind_main p {
+    font-size: 1rem;
+  }
+
+  .footer_upper {
+
+	flex-direction: column;
+
+  }
+
+}
+
+
+
+@media only screen and (max-width: 992px) {
+
+  .main_wrapper {
+
+	padding: 0 0;
+
+  }
+
+  .logo {
+
+	display: none;
+	
+  }
+
+  .navbar {
+
+	justify-content: end;
+  
+  }
+
+
+  .facilities_card {
+	
+	width: 80%;
+
+  }
+
+  /*Gallery*/
+
+  .gallery_card_ind {
+
+	width: 100%;
+
+  }
+
+  /*End Gallery*/
+
+  .univ_off_card_ind {
+
+    width: 60%;
+
+    height: 50%;
+
+  }
+
+  
+
+  .univ_details_card_ind {
+
+	width: 100%;
+
+  }
+
+  
+
+  .univ_off_card_ind img {
+
+	width: 65%;
+
+  }
+
+  
+
+  .univ_details_card_ind_main h1 {
+
+	padding: 0 3rem;
+
+  }
+
+  
+
+  /*contact*/
+
+  
+
+  .contact_info_img {
+
+	display: none;
+
+  }
+
+  
+
+  .contact_info_form {
+
+	width: 100%;
+
+	padding: 2rem 1rem;
+
+  }
+
+  
+
+  .btn_submit {
+
+	width: 100%;
+
+	border: 1px solid #ff7700;
+
+	color: #ff7700;
+
+	background-color: white;
+
+	padding: 15px 32px;
+
+	margin: .5rem 0 0 0;
+
+	text-align: center;
+
+	text-decoration: none;
+
+	font-size: 16px;
+
+	font: bold;
+
+	cursor: pointer;
+
+}
+
+.btn_submit:hover {
+
+	background-color: #ff7700;
+
+	color: white;
+
+}
+  
+  .footer {
+
+	flex-direction: column;
+
+	padding: 1rem 2rem;
+
+  }
+
+  .footer_upper {
+
+	flex-direction: column;
+
+  }
+
+  .footer div {
+
+	width: 100%;
+
+	padding: 2rem 0;	
+
+	gap: 1rem 0;
+
+  }
+
+  
+
+  .footer_logo img {
+
+	  width: 30%
+
+  }
+
+  
+
+  .footer_links p {
+
+	text-align: center;
+
+  }
+
+  
+
+  .footer_links h5 {
+
+	width: 100%;
+
+	text-align: center;
+
+	font-family:'Courier New', Courier, monospace;
+
+  }
+
+  
+
+  .mission,
+
+  .vision,
+
+  .goals  {
+
+	border-left: none;
+
+	border-right: none;
+
+  }
+
+  
+
+  .section_title {
+
+	font-size: 1.5rem;
+
+	border-left: 2rem solid green;
+
+  }
+
+}

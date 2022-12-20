@@ -1,0 +1,224 @@
+.news {
+
+  display: flex;
+
+  justify-content: center;
+  
+  flex-wrap: wrap;
+
+  position: relative;
+
+}
+
+.news_slider {
+
+  display: flex;
+
+  justify-content: center;
+
+  width: 100%;
+  
+  flex-wrap: wrap;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  position: absolute;
+
+  bottom: 0;
+}
+
+.news_slider a {
+	padding: .5rem;
+	
+	border: 1px solid #ff7700;
+	
+	color: black;
+	
+	cursor: pointer;
+	
+	margin: 0 1rem;
+	
+	font-weight: bold;
+
+  border-radius: 50%;
+}
+
+.news_slider a:hover {
+	
+	background-color: #ff7700;
+	
+	color: white;
+	
+	border: none;
+	
+	cursor: pointer;
+	
+	margin: 0 1rem;
+}
+
+.news_slides {
+
+  display: flex;
+
+  overflow-x: auto;
+
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+
+  -webkit-overflow-scrolling: touch;
+
+  width: 100%;
+
+}
+
+.news_slides::-webkit-scrollbar {
+
+  width: 10px;
+
+  height: 10px;
+
+}
+
+.news_slides::-webkit-scrollbar-thumb {
+
+  background: white;
+
+  border-radius: 10px;
+
+}
+
+.news_slides::-webkit-scrollbar-track {
+
+  background: transparent;
+
+}
+
+.news_slides > div {
+
+  scroll-snap-align: center;
+
+  flex-shrink: 0;
+
+  width: 100vw;
+
+  height: 800px;
+
+  margin-right: 50px;
+
+  border-radius: 10px;
+
+  background: #eee;
+
+  transform-origin: center center;
+
+  transform: scale(1);
+
+  transition: transform 0.5s;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 100px;
+
+}
+
+.news_slides > div > h5 {
+
+  z-index: 10;
+
+  font-size: 4rem;
+
+  font-weight: bolder;
+
+  position: absolute;
+
+  bottom: 0;
+
+  padding: 2rem;
+
+  color: var(--darkgray);
+
+  background-color: white;
+
+  width: 100%;
+
+  text-align: center;
+
+}
+
+.news_slides img {
+
+  object-fit: cover;
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  bottom: 0;
+
+  right: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .news_slides > div {
+
+    width: 80vw;
+  
+    height: 400px;
+  
+    }
+
+  .news_slides > div > h5 {
+  
+    font-size: 1.5rem;
+  
+  }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+  .news_slider {
+
+    width: 80%;
+
+  }
+
+  .news_slides {
+  
+    width: 80%;
+  
+  }
+
+  .news_slides > div {
+
+  width: 80vw;
+
+  height: 600px;
+
+  }
+
+  .news_slides > div > h5 {
+  
+    font-size: 2rem;
+  
+  }
+
+}
